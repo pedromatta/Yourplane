@@ -1,0 +1,69 @@
+:root {
+    --black: #343434;
+    --bege: #aca48d;
+    --white: #f1f6f2;
+    --light-grey: #eff1ec;
+    --light-bege: #dfe0ce;
+}
+
+main {
+    width: 80%;
+    margin: 200px auto;
+}
+
+.container {
+    color: var(--white);
+}
+
+.container img {
+    text-align: center;
+    width: 500px;
+}
+
+.container button {
+    color: var(--white);
+    background-color: var(--bege);
+    border: none;
+    font-weight: 600;
+}
+
+.container button:hover {
+    color: var(--bege);
+    background-color: var(--white);
+}
+
+.container input {
+    color: var(--black);
+    border: none;
+}
+
+.container input::placeholder {
+    color: var(--black);
+    opacity: 50%;
+}
+
+#mensagemErro {
+    text-align: center;
+    margin-top: 5px;
+}
+
+#mensagemErro2 {
+    text-align: center;
+    margin-top: 5px;
+}
+
+.container p {
+    color: var(--white);
+}
+
+.container p a {
+    text-decoration: none;
+    color: var(--bege);
+    font-weight: 600;
+}
+
+@media screen and (min-width: 768px) {
+    main {
+        width: 50%;
+    }
+}

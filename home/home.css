@@ -8,15 +8,16 @@
 
 .login-container {
     display: flex;
-    background-color: var(--bege);
-    border-radius: 10px;
     align-items: center;
-    padding: 0.2rem 2rem;
 }
-.login-container a{
+.login-container button{
     text-decoration: none;
     color: var(--white);
-    font-weight: 700;
+    font-weight: 600;
+    background-color: var(--bege);
+    border: none;
+    border-radius: 10px;
+    padding: 0.2rem 2rem;
 }
 
 .destaques-container {
