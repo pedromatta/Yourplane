@@ -1,0 +1,34 @@
+{
+    "modelos": [
+      {
+        "imagem": "../img/G650ER.jpg",
+        "nome": "Gulfstream G650",
+        "descricao": "Jato executivo de longo alcance com velocidade máxima de Mach 0,925."
+      },
+      {
+        "imagem": "../img/bombardier-global-7500.jpg",
+        "nome": "Bombardier Global 7500",
+        "descricao": "Jato executivo ultralongo alcance com autonomia de mais de 14.260 km."
+      },
+      {
+        "imagem": "../img/dassault-falcon-7x.jpg",
+        "nome": "Dassault Falcon 7X",
+        "descricao": "Jato executivo de alcance intercontinental com velocidade máxima de Mach 0,90."
+      },
+      {
+        "imagem": "../img/cessna-citation-latitude.jpg",
+        "nome": "Cessna Citation Latitude",
+        "descricao": "Jato executivo de médio alcance com capacidade para até 9 passageiros."
+      },
+      {
+        "imagem": "../img/embraer-phenom-300e.jpg",
+        "nome": "Embraer Phenom 300E",
+        "descricao": "Jato executivo leve com alcance de mais de 3.650 km."
+      },
+      {
+        "imagem": "../img/hondajet-ha-420.jpg",
+        "nome": "HondaJet HA-420",
+        "descricao": "Jato executivo de pequeno porte com velocidade máxima de Mach 0,82."
+      }
+    ]
+  }
