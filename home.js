@@ -1,13 +1,5 @@
-//Obtendo o usuário logado do localStorage
-let usuarioLogado = JSON.parse(localStorage.getItem('usuarioLogado')) 
-//Obtendo a referência ao elemento do DOM para exibir o nome do usuário
-let nomeUsuario = document.getElementById('nomeUsuario')
-
-//Exibindo o nome do usuário no HTML
-nomeUsuario.innerHTML = `${usuarioLogado.nome}`;
-
 //Obtendo os dados dos aviões armazenados no JSON através de uma requisição.
-fetch('../dados/avioes.json')
+fetch('dados/avioes.json')
     //Transformando a resposta da requisição em JSON
     .then(response => response.json())
     .then(data => {
@@ -34,15 +26,8 @@ fetch('../dados/avioes.json')
         });
     }); 
 
-//Verificando se há um token no localStorage e redirecionando para a página inicial para usuários deslogados se não houver.
-if(localStorage.getItem('token') == null){
-    window.location.href = '../home.html'
-}
-
-//Função para deslogar da página
-function sair(){
-    //Removendo o token do localStorage
-    localStorage.removeItem('token');
-    //Redirecionando para a página inicial para usuários deslogados.
-    window.location.href = '../home.html'
-}
+    //Verificando se há um token no localStorage e redirecionando para a página inicial para usuários logados se houver.
+    if(localStorage.getItem('token')){
+        window.location.href = 'user_home/user_home.html'
+    }
+    
