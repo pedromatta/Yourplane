@@ -20,23 +20,28 @@ function entrar() {
     //Obtendo os usuários armazenados no localStorage
     usuarios = JSON.parse(localStorage.getItem('usuarios'));
 
-    //Iterando sobre os usuários para validar o login
-    usuarios.forEach((item) => {
-        //Verificando se os inputs do usuário correspondem com os dados do localStorage
-        if (usuario.value == item.usuarioCad && senha.value == item.senhaCad) {
-            //Armazenando as propriedades do usuário do localStorage no objeto validaUsuario
-            validaUsuario = {
-                nome: item.nomeCad,
-                email: item.emailCad,
-                usuario: item.usuarioCad,
-                senha: item.senhaCad,
+    if (usuarios && Array.isArray(usuarios)) {
+        // Iterar sobre os usuários apenas se a variável 'usuarios' existir e for um array
+        usuarios.forEach((item) => {
+            if (usuario.value == item.usuarioCad && senha.value == item.senhaCad) {
+                validaUsuario = {
+                    nome: item.nomeCad,
+                    email: item.emailCad,
+                    usuario: item.usuarioCad,
+                    senha: item.senhaCad,
+                }
             }
-        }
-    });
+        });
+    } else {
+        // Tratar o caso em que 'usuarios' é 'null' ou 'undefined'
+        console.error("A variável 'usuarios' não está definida como um array.");
+    }
+
     //Exibindo mensagem de erro se o usuário ou a senha estiverem em branco.
-    if (validaUsuario.item == '' || validaUsuario.senha == '') {
+    if (usuario.value == '' || usuario.value == '') {
 
         mensagemErro2.className = 'd-block';
+        mensagemErro.className = 'd-none';
 
     //Redirecionando para a página inicial para usuários logados se o login for bem-sucedido
     } else if (usuario.value == validaUsuario.usuario && senha.value == validaUsuario.senha) {
@@ -54,6 +59,7 @@ function entrar() {
     } else {
 
         mensagemErro.className = 'd-block';
+        mensagemErro2.className = 'd-none';
 
     }
 }

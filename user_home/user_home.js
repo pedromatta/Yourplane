@@ -36,7 +36,7 @@ fetch('../dados/avioes.json')
 
 //Verificando se há um token no localStorage e redirecionando para a página inicial para usuários deslogados se não houver.
 if(localStorage.getItem('token') == null){
-    window.location.href = '../home.html'
+    window.location.href = '../index.html'
 }
 
 //Função para deslogar da página
@@ -44,5 +44,5 @@ function sair(){
     //Removendo o token do localStorage
     localStorage.removeItem('token');
     //Redirecionando para a página inicial para usuários deslogados.
-    window.location.href = '../home.html'
+    window.location.href = '../index.html'
 }
