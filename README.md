@@ -1,8 +1,8 @@
 # yourplane
-<h4>Página web para um catálogo de aeronaves pessoais.</h4>
-<p></p>Projeto desenvolvido para a disciplina Trabalho Interdisciplinar: Aplicações Web, dos cursos: Análise e Desenvolvimento de Sistemas e Sistemas de Informação, da PUC Minas Betim.</p>
-Para visualizar a página, basta ir para esse endereço:
+Página web para um catálogo de aeronaves pessoais. <br>
+<br>Projeto desenvolvido para a disciplina Trabalho Interdisciplinar: Aplicações Web, dos cursos: Análise e Desenvolvimento de Sistemas e Sistemas de Informação, da PUC Minas Betim.<br>
+<br>Para visualizar a página, basta ir para esse endereço:<br>
 ```
-https://yourplane.vercel.app
+<p>https://yourplane.vercel.app</p>
 ```
-<p></p>Realizado por: Felipe Crelier e Pedro Matta</p>
+<br>Realizado por: Felipe Crelier e Pedro Matta</p>
