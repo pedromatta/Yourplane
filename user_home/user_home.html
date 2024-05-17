@@ -15,13 +15,10 @@
     <header>
         <nav class="navbar navbar-expand-md" data-bs-theme="dark" style="background-color: var(--black);">
             <div class="container-fluid mx-2">
-                <div class="inicio">
                     <a href="#" class="navbar-brand">
                         <img src="../img/logo-default.svg" alt="Logo da Yourplane" class="d-inline-block align-text-top"
                             height="30">
                     </a>
-                </div>
-                </div>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
                     aria-label="Toggle navigation">
@@ -29,21 +26,38 @@
                 </button>
             </div>
             <div class="collapse navbar-collapse mx-2" id="navbarNavAltMarkup">
-                <div class="navbar-nav">
+                <ul class="navbar-nav me-auto">
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" id="nomeUsuario">
                         </a>
                         <ul class="dropdown-menu">
-                          <li><a class="dropdown-item" href="#">Lista de Desejos</a></li>
-                          <li><hr class="dropdown-divider"></li>
-                          <li><a class="dropdown-item" href="#" onclick="sair()">Sair</a></li>
+                            <li>
+                                <a class="dropdown-item" href="#">Lista de Desejos</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">Avaliações</a>
+                            </li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#" onclick="sair()">Sair</a>
+                            </li>
                         </ul>
                     </li>
-                    <a class="nav-link active" aria-current="page" href="user_home.html">Início</a>
-                    <a class="nav-link" href="../catalog/catalog.html">Catálogo</a>
-                    <a class="nav-link" href="../about/about.html">Sobre</a>
-                    <a class="nav-link" href="../contact/contact.html">Contato</a>
-                </div>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="user_home.html">Início</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../catalog/catalog.html">Catálogo</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../about/about.html">Sobre</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../contact/contact.html">Contato</a>
+                    </li>
+                </ul>
             </div>
         </nav>
     </header>

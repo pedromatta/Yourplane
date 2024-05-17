@@ -34,7 +34,7 @@ function entrar() {
         });
     } else {
         // Tratar o caso em que 'usuarios' é 'null' ou 'undefined'
-        console.error("A variável 'usuarios' não está definida como um array.");
+        console.error("Não há nenhum usuário registrado.");
     }
 
     //Exibindo mensagem de erro se o usuário ou a senha estiverem em branco.

@@ -4,24 +4,14 @@
     --white: #f1f6f2;
     --light-grey: #eff1ec;
     --light-bege: #dfe0ce;
-}
-
-.login-container {
-    display: flex;
-    align-items: center;
-}
-.login-container button{
-    text-decoration: none;
-    color: var(--white);
-    font-weight: 600;
-    background-color: var(--bege);
-    border: none;
-    border-radius: 10px;
-    padding: 0.2rem 2rem;
-}
+}  
 
 .destaques-container {
     margin: 2rem 0;
+}
+
+ul.dropdown-menu{
+    background-color: var(--black);
 }
 
 hr {
@@ -49,4 +39,10 @@ div input[type=text] {
 
 footer button {
     border: none;
+}
+
+@media screen and (min-width: 768px) {
+    ul.dropdown-menu{
+        border: none;
+    }
 }
