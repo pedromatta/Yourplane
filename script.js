@@ -12,7 +12,7 @@ fetch('dados/avioes.json')
             var card = `
             <div class="col">
             <div class="card m-3" style="width: auto; height: 100%; background-color: var(--black); color: var(--white); border: none">
-                <img src="${modelos.imagem}" class="card-img-top" alt="${modelos.nome}" style="width: 100%; height: 15rem; object-fit: cover; object-position: left">
+                <img src="${modelos.imagem}" class="card-img-top" alt="${modelos.nome}">
                 <div class="card-body">
                     <h5 class="card-title">${modelos.nome}</h5>
                     <p class="card-text">${modelos.descricao}</p>
