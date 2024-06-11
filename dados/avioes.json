@@ -1,34 +1,254 @@
 {
-    "modelos": [
-      {
-        "imagem": "../img/G650ER.jpg",
-        "nome": "Gulfstream G650",
-        "descricao": "Jato executivo de longo alcance com velocidade máxima de Mach 0,925."
+  "airplanes": [
+    {
+      "model": "Hawker 900XP",
+      "manufacturer": "Hawker Beechcraft",
+      "capacity": 9,
+      "range": "4800 km",
+      "cruise_speed": "870 km/h",
+      "images": [
+        "https://centraljets.com/static/vip/aircraft/60_12613.png",
+        "https://centraljets.com/static/vip/aircraft/60_d0f70.jpg",
+        "https://centraljets.com/static/vip/aircraft/60_28e89.jpg"
+      ],
+      "short_description": "Um jato executivo confortável, operado pela CTR Atmospherica Aviation. Acomoda até 9 passageiros.",
+      "description": "Este avião Hawker 900XP voa sob o número de cauda OK-HWK. Operado pela CTR Atmospherica Aviation a.s., foi construído em 2007 pela Hawker Beechcraft como parte da série Hawker 900XP. O avião foi reformado em 2022 (2) e em 2018 (exterior). O OK-HWK está baseado em LKPR e pode transportar até 9 passageiros.",
+      "specifications": {
+        "length": "15.6 metros",
+        "wingspan": "16.5 metros",
+        "height": "5.5 metros",
+        "empty_weight": "7260 kg",
+        "max_takeoff_weight": "12500 kg",
+        "engines": "TFE731-50R"
       },
-      {
-        "imagem": "../img/bombardier-global-7500.jpg",
-        "nome": "Bombardier Global 7500",
-        "descricao": "Jato executivo ultralongo alcance com autonomia de mais de 14.260 km."
+
+      "favorite": false,
+      "id": 1
+    },
+    {
+      "model": "Legacy 450",
+      "manufacturer": "Embraer",
+      "capacity": 9,
+      "range": "5370 km",
+      "cruise_speed": "860 km/h",
+      "images": [
+        "https://centraljets.com/static/vip/aircraft/61_68344.jpg",
+        "https://centraljets.com/static/vip/aircraft/61_b532e.jpg",
+        "https://centraljets.com/static/vip/aircraft/61_5ec72.jpg"
+      ],
+      "short_description": "Um jato executivo de médio alcance operado pela Atlas Air Service. Acomoda até 9 passageiros.",
+      "description": "Este avião Legacy 450 voa sob o número de cauda D-BFIL. Operado pela Atlas Air Service, foi construído em 2016 pela Embraer como parte da série Legacy 450. O D-BFIL está baseado em EDDW e pode transportar até 9 passageiros.",
+      "specifications": {
+        "length": "19.7 metros",
+        "wingspan": "21.1 metros",
+        "height": "6.7 metros",
+        "empty_weight": "10500 kg",
+        "max_takeoff_weight": "16000 kg",
+        "engines": "Honeywell HTF7500E"
       },
-      {
-        "imagem": "../img/dassault-falcon-7x.jpg",
-        "nome": "Dassault Falcon 7X",
-        "descricao": "Jato executivo de alcance intercontinental com velocidade máxima de Mach 0,90."
+
+      "favorite": false,
+      "id": 2
+    },
+    {
+      "model": "Gulfstream G-450",
+      "manufacturer": "Gulfstream Aerospace",
+      "capacity": 14,
+      "range": "8060 km",
+      "cruise_speed": "880 km/h",
+      "images": [
+        "https://centraljets.com/static/vip/aircraft/62_cd407.jpg",
+        "https://centraljets.com/static/vip/aircraft/62_676f9.jpg",
+        "https://centraljets.com/static/vip/aircraft/62_d0799.png"
+      ],
+      "short_description": "Jato executivo de longo alcance, operado pela Luxaviation Luxembourg. Acomoda até 14 passageiros.",
+      "description": "Este avião Gulfstream G-450 voa sob o número de cauda OE-ITC. Operado pela Luxaviation Luxembourg (operado pela Luxaviation Germany GmbH), foi construído em 2007 pela Gulfstream Aerospace como parte da série Gulfstream G-450. O avião foi reformado em 2018 (2 e exterior). O OE-ITC está baseado em LIML e pode transportar até 14 passageiros.",
+      "specifications": {
+        "length": "27.3 metros",
+        "wingspan": "24.4 metros",
+        "height": "7.4 metros",
+        "empty_weight": "19205 kg",
+        "max_takeoff_weight": "33793 kg",
+        "engines": "Rolls-Royce Tay 611-8C"
       },
-      {
-        "imagem": "../img/cessna-citation-latitude.jpg",
-        "nome": "Cessna Citation Latitude",
-        "descricao": "Jato executivo de médio alcance com capacidade para até 9 passageiros."
+
+      "favorite": false,
+      "id": 3
+    },
+    {
+      "model": "Challenger 850",
+      "manufacturer": "Bombardier",
+      "capacity": 13,
+      "range": "5200 km",
+      "cruise_speed": "850 km/h",
+      "images": [
+        "https://centraljets.com/static/vip/aircraft/63_b763b.jpg",
+        "https://centraljets.com/static/vip/aircraft/63_3681d.jpg",
+        "https://centraljets.com/static/vip/aircraft/63_13a3a.jpg"
+      ],
+      "short_description": "Jato executivo versátil, operado pela Air X. Acomoda até 13 passageiros.",
+      "description": "Este avião Challenger 850 voa sob o número de cauda D-AJOY. Operado pela Air X, foi construído em 2008 pela Bombardier como parte da série Challenger 850. O avião foi reformado em 2016 (2 e exterior). O D-AJOY está baseado em LOWW e pode transportar até 13 passageiros.",
+      "specifications": {
+        "length": "26.8 metros",
+        "wingspan": "21.2 metros",
+        "height": "6.3 metros",
+        "empty_weight": "23400 kg",
+        "max_takeoff_weight": "24000 kg",
+        "engines": "General Electric CF34-3B1"
       },
-      {
-        "imagem": "../img/embraer-phenom-300e.jpg",
-        "nome": "Embraer Phenom 300E",
-        "descricao": "Jato executivo leve com alcance de mais de 3.650 km."
+
+      "favorite": false,
+      "id": 4
+    },
+    {
+      "model": "Falcon 7X",
+      "manufacturer": "Dassault Aviation",
+      "capacity": 14,
+      "range": "11000 km",
+      "cruise_speed": "900 km/h",
+      "images": [
+        "https://centraljets.com/static/vip/aircraft/s_64_6c039.jpg",
+        "https://centraljets.com/static/vip/aircraft/64_fba63.jpg",
+        "https://centraljets.com/static/vip/aircraft/64_3f908.jpg"
+      ],
+      "short_description": "Jato executivo de longo alcance operado pela Air Hamburg. Acomoda até 14 passageiros.",
+      "description": "Este avião Falcon 7X voa sob o número de cauda D-ASIM. Operado pela Air Hamburg, foi construído em 2010 como parte da série Falcon 7X. O D-ASIM está baseado em LFPB e pode transportar até 14 passageiros.",
+      "specifications": {
+        "length": "23.2 metros",
+        "wingspan": "26.2 metros",
+        "height": "7.8 metros",
+        "empty_weight": "15850 kg",
+        "max_takeoff_weight": "31750 kg",
+        "engines": "Pratt & Whitney PW307A"
       },
-      {
-        "imagem": "../img/hondajet-ha-420.jpg",
-        "nome": "HondaJet HA-420",
-        "descricao": "Jato executivo de pequeno porte com velocidade máxima de Mach 0,82."
-      }
-    ]
-  }
+
+      "favorite": false,
+      "id": 5
+    },
+    {
+      "model": "T7-ALEX Global 5000",
+      "manufacturer": "Bombardier",
+      "capacity": 13,
+      "range": "9630 km",
+      "cruise_speed": "944 km/h",
+      "images": [
+        "https://centraljets.com/static/vip/aircraft/4410_95c69.jpg",
+        "https://centraljets.com/static/vip/aircraft/4410_406b8.jpg",
+        "https://centraljets.com/static/vip/aircraft/4410_5efe7.png"
+      ],
+      "short_description": "Jato executivo operado pela Alexjet. Acomoda até 13 passageiros.",
+      "description": "Este avião Global 5000 voa sob o número de cauda T7-ALEX. Operado pela Alexjet (Operado por: Alex Jets San Marino S.R.L.), foi construído em 2006 pela Bombardier como parte da série Global 5000. O avião foi reformado em 2021 (2) e em 2021 (exterior).",
+      "specifications": {
+        "length": "29.5 metros",
+        "wingspan": "28.7 metros",
+        "height": "7.8 metros",
+        "empty_weight": "22000 kg",
+        "max_takeoff_weight": "42865 kg",
+        "engines": "Rolls-Royce BR710"
+      },
+
+      "favorite": false,
+      "id": 6
+    },
+    {
+      "model": "9H-VJL Global 6000",
+      "manufacturer": "Bombardier",
+      "capacity": 13,
+      "range": "11265 km",
+      "cruise_speed": "944 km/h",
+      "images": [
+        "https://centraljets.com/static/vip/aircraft/52_1f2f9.jpg",
+        "https://centraljets.com/static/vip/aircraft/52_275d1.jpg",
+        "https://centraljets.com/static/vip/aircraft/52_1ead7.jpg"
+      ],
+      "short_description": "Jato executivo operado pela VistaJet. Acomoda até 13 passageiros.",
+      "description": "Este avião Global 6000 voa sob o número de cauda 9H-VJL. Operado pela VistaJet, foi construído em 2014 pela Bombardier como parte da série Global 6000. O avião é baseado em OMDB e pode transportar até 13 passageiros.",
+      "specifications": {
+        "length": "30.3 metros",
+        "wingspan": "28.7 metros",
+        "height": "7.9 metros",
+        "empty_weight": "24150 kg",
+        "max_takeoff_weight": "45810 kg",
+        "engines": "Rolls-Royce BR710"
+      },
+
+      "favorite": false,
+      "id": 7
+    },
+    {
+      "model": "T7-MSK Global 5000",
+      "manufacturer": "Bombardier",
+      "capacity": 13,
+      "range": "9630 km",
+      "cruise_speed": "944 km/h",
+      "images": [
+        "https://centraljets.com/static/vip/aircraft/65_4a9e6.png",
+        "https://centraljets.com/static/vip/aircraft/65_84ec5.png",
+        "https://centraljets.com/static/vip/aircraft/65_6c61e.png"
+      ],
+      "short_description": "Jato executivo operado pela MJet. Acomoda até 13 passageiros",
+      "description": "Este avião Global 5000 voa sob o número de cauda T7-MSK. Operado pela MJet, foi construído em 2005 pela Bombardier como parte da série Global 5000. O avião é baseado em EGGW e pode transportar até 13 passageiros.",
+      "specifications": {
+        "length": "29.5 metros",
+        "wingspan": "28.7 metros",
+        "height": "7.8 metros",
+        "empty_weight": "22000 kg",
+        "max_takeoff_weight": "42865 kg",
+        "engines": "Rolls-Royce BR710"
+      },
+
+      "favorite": false,
+      "id": 8
+    },
+    {
+      "model": "VT-JSK Global 5000",
+      "manufacturer": "Bombardier",
+      "capacity": 13,
+      "range": "9630 km",
+      "cruise_speed": "944 km/h",
+      "images": [
+        "https://centraljets.com/static/vip/aircraft/66_92f3e.jpg",
+        "https://centraljets.com/static/vip/aircraft/66_9cd4b.jpg",
+        "https://centraljets.com/static/vip/aircraft/66_a91a2.png"
+      ],
+      "short_description": "Jato executivo operado pela JetSetGo. Acomoda até 13 passageiros.",
+      "description": "Este avião Global 5000 voa sob o número de cauda VT-JSK. Operado pela JetSetGo, foi construído em 2006 pela Bombardier como parte da série Global 5000. O avião é baseado em VIDP e pode transportar até 13 passageiros.",
+      "specifications": {
+        "length": "29.5 metros",
+        "wingspan": "28.7 metros",
+        "height": "7.8 metros",
+        "empty_weight": "22000 kg",
+        "max_takeoff_weight": "42865 kg",
+        "engines": "Rolls-Royce BR710"
+      },
+
+      "favorite": false,
+      "id": 9
+    },
+    {
+      "model": "D-AUWE Global Express",
+      "manufacturer": "Bombardier",
+      "capacity": 13,
+      "range": "11490 km",
+      "cruise_speed": "944 km/h",
+      "images": [
+        "https://centraljets.com/static/vip/aircraft/69_d26d7.jpg",
+        "https://centraljets.com/static/vip/aircraft/69_f934b.jpg",
+        "https://www.fai.ag/wp-content/uploads/2019/09/dauwe-floorplan-day.png.webp"
+      ],
+      "short_description": "Jato executivo operado pela Windrose Air. Acomoda até 13 passageiros.",
+      "description": "Este avião Global Express voa sob o número de cauda D-AUWE. Operado pela Windrose Air, foi construído em 2000 pela Bombardier como parte da série Global Express. O avião é baseado em EDDB e pode transportar até 13 passageiros.",
+      "specifications": {
+        "length": "30.3 metros",
+        "wingspan": "28.7 metros",
+        "height": "7.9 metros",
+        "empty_weight": "23800 kg",
+        "max_takeoff_weight": "42600 kg",
+        "engines": "Rolls-Royce BR710"
+      },
+
+      "favorite": false,
+      "id": 10
+    }
+  ]
+}

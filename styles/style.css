@@ -1,0 +1,239 @@
+/* -------------------------------
+    Variáveis Globais
+------------------------------- */
+
+:root {
+  --black: #343434;
+  --dark-bege: #968a68;
+  --bege: #aca48d;
+  --white: #f1f6f2;
+  --light-grey: #eff1ec;
+  --light-bege: #dfe0ce;
+}
+
+/* -------------------------------
+    Navbar
+------------------------------- */
+
+.navbar {
+  background-color: var(--black);
+}
+
+.navbar-toggler {
+  border: none;
+}
+
+/* -------------------------------
+    Botões
+------------------------------- */
+.btn-custom {
+  text-decoration: none;
+  color: var(--white);
+  font-weight: 600;
+  background-color: var(--bege);
+  border: none;
+  border-radius: 10px;
+  padding: 0.2rem 2rem;
+}
+
+.btn:hover,
+.btn-custom:hover {
+  background-color: var(--dark-bege);
+}
+
+/* -------------------------------
+    Dropdown Menu
+------------------------------- */
+
+ul.dropdown-menu {
+  background-color: var(--black);
+  --bs-dropdown-link-hover-bg: var(--bege);
+}
+
+/* -------------------------------
+    Catalogo
+------------------------------- */
+
+.catalog-container {
+  margin: 2rem 0;
+}
+
+.dropdown-ordenar-toggle,
+.dropdown-filtrar-toggle {
+  color: var(--black);
+  text-decoration: none;
+}
+
+/* -------------------------------
+    Carousel
+------------------------------- */
+
+.carousel {
+  background-color: var(--black);
+}
+
+.carousel-image {
+  opacity: 60%;
+  transition: opacity 0.7s;
+}
+
+.carousel:hover .carousel-image {
+  opacity: 100%;
+  cursor: pointer;
+}
+
+/* -------------------------------
+    Destaques
+------------------------------- */
+
+.destaques-container {
+  margin: 2rem 0;
+}
+
+/* -------------------------------
+    Footer
+------------------------------- */
+
+footer {
+  margin-top: 3rem;
+}
+
+footer .row {
+  margin-top: 2rem;
+}
+
+/* -------------------------------
+    Inputs
+------------------------------- */
+
+div input[type=text] {
+  background-color: var(--white);
+  border: none;
+  text-decoration: none;
+}
+
+footer button {
+  border: none;
+}
+
+/* -------------------------------
+      Login e Register
+  ------------------------------- */
+#login-main,
+#register-main{
+  width: 80%;
+  margin: 200px auto;
+}
+
+#mensagemErro,
+#mensagemErro2,
+#mensagemSucesso {
+  text-align: center;
+  margin-top: 5px;
+}
+
+.login-container {
+  color: var(--white);
+}
+
+.login-container img,
+.about-container img {
+  text-align: center;
+  width: 500px;
+}
+
+.login-container button {
+  color: var(--white);
+  background-color: var(--bege);
+  border: none;
+  font-weight: 600;
+}
+
+.login-container button:hover {
+  color: var(--bege);
+  background-color: var(--white);
+}
+
+.login-container input {
+  color: var(--black);
+  border: none;
+}
+
+.login-container input::placeholder {
+  color: var(--black);
+  opacity: 50%;
+}
+
+.login-container label {
+  margin-top: 5px;
+}
+
+.login-container p {
+  color: var(--white);
+}
+
+.login-container p a {
+  text-decoration: none;
+  color: var(--bege);
+  font-weight: 600;
+}
+
+/* -------------------------------
+    About
+------------------------------- */
+.about-container {
+  width: 80%;
+  padding: 5%;
+  margin: 200px auto;
+  color: var(--white);
+  background-color: var(--black);
+}
+
+.about-subtitle,
+.about-text {
+  margin-top: 3rem;
+  font-size: 20px;
+  text-align: center;
+}
+
+.about-text{
+  text-align: justify;
+}
+
+
+
+/* -------------------------------
+    Responsividade
+------------------------------- */
+
+@media screen and (min-width: 768px) {
+  div.navbar {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    z-index: 10;
+    width: 100%;
+  }
+
+  ul.dropdown-menu {
+    border: none;
+  }
+
+  .carousel {
+    margin-top: -105px;
+  }
+
+  /* -------------------------------
+      Estilos Específicos
+  ------------------------------- */
+  #login-main,
+  #register-main,
+  .about-container {
+    width: 50%;
+  }
+
+
+  /* Index e User Index */
+  .index-navbar {
+    background: transparent;
+  }
+}
