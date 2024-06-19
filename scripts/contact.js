@@ -5,5 +5,5 @@ import{
 
 window.onload = () =>{
     renderNavbarLeftSide();
-    renderNavbarRightSide('about');
+    renderNavbarRightSide('contact');
 }

@@ -79,7 +79,7 @@ function redirectToHomePage(user) {
     localStorage.setItem('usuarioLogado', JSON.stringify(user));
 
     // Redireciona para a página inicial
-    window.location.href = 'user_index.html';
+    window.location.href = 'index.html';
 }
 
 // Função auxiliar para gerar um token aleatório

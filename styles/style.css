@@ -41,6 +41,15 @@
   background-color: var(--dark-bege);
 }
 
+.btn-favorites {
+  height: 30px;
+  margin-right: 5px;
+}
+
+.btn-favorites:hover{
+  cursor: pointer;
+}
+
 /* -------------------------------
     Dropdown Menu
 ------------------------------- */
@@ -54,8 +63,23 @@ ul.dropdown-menu {
     Catalogo
 ------------------------------- */
 
-.catalog-container {
-  margin: 2rem 0;
+.catalog-div {
+  margin-top: 2rem;
+  display: block;
+}
+
+.dropdowns-div {
+  margin-right: 25px;
+}
+
+.dropdowns-div .dropdowns-list{
+  list-style-type: none;
+  padding-left: 13px;
+  display: flex;
+}
+
+.dropdowns-div .dropdown-ordenar{
+  margin-right: 10%;
 }
 
 .dropdown-ordenar-toggle,
@@ -63,6 +87,12 @@ ul.dropdown-menu {
   color: var(--black);
   text-decoration: none;
 }
+
+.linha-catalogo {
+  margin: 0.5rem 2rem;
+  margin-bottom: 2rem;
+}
+
 
 /* -------------------------------
     Carousel
@@ -189,22 +219,44 @@ footer button {
   background-color: var(--black);
 }
 
-.about-subtitle,
 .about-text {
   margin-top: 3rem;
   font-size: 20px;
-  text-align: center;
-}
-
-.about-text{
   text-align: justify;
 }
 
+/* -------------------------------
+    Contact
+------------------------------- */
+.contact-container{
+  margin: 7rem 0;
+}
+
+.contact-container .form-label{
+  color: var(--black);
+  font-weight: 600;
+}
+
+.contact-container .form-control,
+.contact-container .form-control:focus{
+  color: var(--white);
+  background-color: var(--black);
+}
+
+.contact-container .form-control::placeholder{
+  color: var(--white);
+  opacity: 70%;
+}
 
 
 /* -------------------------------
     Responsividade
 ------------------------------- */
+@media screen and (min-width: 335px) {
+  .catalog-div{
+    display: flex;
+  }
+}
 
 @media screen and (min-width: 768px) {
   div.navbar {
@@ -232,7 +284,7 @@ footer button {
   }
 
 
-  /* Index e User Index */
+  /* Index*/
   .index-navbar {
     background: transparent;
   }

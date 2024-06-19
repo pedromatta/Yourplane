@@ -5,7 +5,7 @@ function renderAirplaneCarousel() {
 
     const carouselItemDiv = document.getElementById('carousel-item-div')
 
-    loadAirplanesFromLocalStorage();
+    let airplanes = loadAirplanesFromLocalStorage();
 
     let modelos = [];
     
@@ -19,15 +19,17 @@ function renderAirplaneCarousel() {
 
     var carouselInner = `
         <div class="carousel-item active">
-            <img src="${modelos[0].images[0]}" class="d-block w-100 carousel-image" alt="${modelos[0].model}">
-            <div class="carousel-caption d-block">
-                <h5>Catálogo</h5>
-                <p class="d-none d-md-block">Confira um catálogo de aeronaves com as opções que você precisa.
-                </p>
-            </div>
+            <a href="catalog.html">
+                <img src="${modelos[0].images[0]}" class="d-block w-100 carousel-image" alt="${modelos[0].model}">
+                <div class="carousel-caption d-block">
+                    <h5>Catálogo</h5>
+                    <p class="d-none d-md-block">Confira um catálogo de aeronaves com as opções que você precisa.
+                    </p>
+                </div>
+            </a>
         </div>`
 
-    for (i = 1; i < 3; i++) {
+    for (let i = 1; i < 3; i++) {
 
         carouselInner += `
             <div class="carousel-item">
@@ -49,30 +51,42 @@ function renderAirplaneCards(number) {
     //Selecionando o card-container no DOM.
     const cardContainer = document.getElementById('card-container');
 
-    loadAirplanesFromLocalStorage();
+    let airplanes = loadAirplanesFromLocalStorage();
+    cardContainer.innerHTML = '';
 
     //Iterando sobre os modelos de aviões armazenados.
-    for (i = 0; i < number; i++) {
+    for (let i = 0; i < number; i++) {
         let modelos = airplanes[i];
         //Criando um card para cada modelo de avião.
-        var card = `
+        cardContainer.innerHTML += `
             <div class="col">
-            <div class="card m-3" style="width: auto; height: 100%; background-color: var(--black); color: var(--white); border: none">
-                <img src="${modelos.images[0]}" class="card-img-top" alt="${modelos.model}">
-                <div class="card-body">
-                    <h5 class="card-title">${modelos.model}</h5>
-                    <p class="card-text">${modelos.short_description}</p>
-                    <span style="display: flex; justify-content: space-between">
-                    <a href="#" class="btn-custom py-2"; font-weight: 600">Detalhes</a>
-                    <a href="#" class="btn-favorites mt-1" id="btn-favorites-${i}"><img class="icone-favoritos" ${modelos.favorite ? 'src="img/star-fill.png"' : 'src="img/star.png"'} style="height: 30px; margin-right: 5px"></a>
-                    </span>
-                </div>
-            </div> 
-        </div>`;
+                <div class="card m-3" style="width: auto; height: 100%; background-color: var(--black); color: var(--white); border: none">
+                    <img src="${modelos.images[0]}" class="card-img-top" alt="${modelos.model}">
+                    <div class="card-body">
+                        <h5 class="card-title">${modelos.model}</h5>
+                        <p class="card-text">${modelos.short_description}</p>
+                        <span style="display: flex; justify-content: space-between">
+                        <a href="#" class="btn-custom py-2"; font-weight: 600">Detalhes</a>
+                        <img class="btn-favorites mt-1" id="favorites-${i}" ${modelos.favorite ? 'src="img/star-fill.png"' : 'src="img/star.png"'}>
+                        </span>
+                    </div>
+                </div> 
+            </div>`;
 
-        //Adicionando o card no HTML.
-        cardContainer.innerHTML += card;
     };
+}
+
+function markFavoritePlane(index, numberAirplanes){
+    let airplanes = loadAirplanesFromLocalStorage();
+
+    for(let i = 0; i < airplanes.length; i++){
+        if(airplanes[i].id == index){
+            airplanes[i].favorite = !airplanes[i].favorite;
+        }
+    }
+
+    localStorage.setItem('airplanes', JSON.stringify(airplanes));
+    renderAirplaneCards(numberAirplanes);
 }
 
 //Carrega os dados dos aviões do local storage
@@ -80,7 +94,7 @@ function loadAirplanesFromLocalStorage() {
     let stringList = localStorage.getItem('airplanes');
 
     if (stringList)
-        airplanes = JSON.parse(stringList);
+        return JSON.parse(stringList);
     else
         uploadAirplanesToLocalStorage();
 }
@@ -96,20 +110,8 @@ function uploadAirplanesToLocalStorage() {
 
 /*Fim das funções para consumir avioes.json*/
 
-/*Função para páginas de usuário deslogado */
-
-function checkLoggedIn(page) {
-    if (localStorage.getItem('token'))
-        window.location.href = page;
-}
-
-/*Fim da função para páginas de usuário deslogado */
-
-/*Funções para páginas de usuário logado*/
-
-function checkLoggedOut(page) {
-    if (localStorage.getItem('token') == null)
-        window.location.href = page;
+function checkToken(){
+    return localStorage.getItem('token');
 }
 
 //Renderiza o nome de usuário nas páginas em que ele está logado
@@ -131,3 +133,75 @@ function logOut() {
 }
 
 /*Fim das funções para páginas de usuário logado*/
+
+function renderNavbarLeftSide() {
+    const navbarLeftSide = document.getElementById('navbar-left-side')
+    
+    navbarLeftSide.innerHTML = `
+        <a href="index.html" class="navbar-brand">
+            <img src="img/logo-default.svg" alt="Logo da Yourplane" class="d-inline-block align-text-top"
+                height="30">
+        </a>`
+    if(!checkToken()){
+        navbarLeftSide.innerHTML += `
+        <div class="container d-none d-md-flex"> 
+            <a class="btn-custom" href="login.html" role="button">Login</a> 
+        </div>`
+    }
+}
+
+function renderNavbarRightSide(page) {
+    const navbarRightSide = document.getElementById('navbarNavAltMarkup');
+
+    if(checkToken()){
+        navbarRightSide.innerHTML = `
+            <ul class="navbar-nav me-auto">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" id="nomeUsuario">
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a class="dropdown-item" href="#">Lista de Desejos</a>
+                        </li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#" onclick="logOut()">Sair</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link${page == 'index' ? ' active" aria-current="page': ''}" href="index.html">Início</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link${page == 'catalog' ? ' active" aria-current="page': ''}" href="catalog.html">Catálogo</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link${page == 'about' ? ' active" aria-current="page': ''}" href="about.html">Sobre</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link${page == 'contact' ? ' active" aria-current="page': ''}" href="contact.html">Contato</a>
+                </li>
+            </ul>`
+
+            renderUserName();
+    }else{
+        navbarRightSide.innerHTML = `
+            <div class="navbar-nav">
+                <a class="nav-link${page == 'index' ? ' active" aria-current="page': ''}" href="index.html">Início</a>
+                <a class="nav-link${page == 'catalog' ? ' active" aria-current="page': ''}" href="catalog.html">Catálogo</a>
+                <a class="nav-link${page == 'about' ? ' active" aria-current="page': ''}" href="about.html">Sobre</a>
+                <a class="nav-link${page == 'contact' ? ' active" aria-current="page': ''}" href="contact.html">Contato</a>
+                <a class="nav-link d-md-none" href="login.html">Login</a>
+            </div>`
+    }
+}
+
+export {
+    renderAirplaneCarousel,
+    renderAirplaneCards,
+    renderNavbarLeftSide,
+    renderNavbarRightSide,
+    markFavoritePlane,
+};
