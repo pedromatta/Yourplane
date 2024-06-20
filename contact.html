@@ -12,6 +12,8 @@
 </head>
 
 <body style="background-color: var(--light-bege);">
+    <div class="modal fade" id="askForLogin" tabindex="-1" aria-labelledby="askForLoginLabel" aria-hidden="true">
+    </div>
     <header>
         <div class="navbar navbar-expand-md px-3" data-bs-theme="dark">
             <div class="container-fluid mx-2">
@@ -29,27 +31,34 @@
     </header>
     <main>
         <main id="contact-main">
-            <div class="container contact-container py-4">
+            <form action="https://formsubmit.co/pmatta.dev@gmail.com" method="POST" class="container contact-container py-4">
+                <div class="mb-3 d-none" id="form-message">
+                </div>
                 <div class="mb-3">
                     <label for="input-name" class="form-label">Nome</label>
-                    <input type="text" class="form-control" id="input-name" placeholder="Seu Nome">
+                    <input type="text" class="form-control" id="input-name" name="name" placeholder="Seu Nome" required>
                 </div>
                 <div class="mb-3">
                     <label for="input-mail" class="form-label">Endereço de Email</label>
-                    <input type="email" class="form-control" id="input-mail" placeholder="name@example.com">
+                    <input type="email" class="form-control" id="input-mail" name="email" placeholder="name@example.com" required>
                 </div>
                 <div class="mb-3">
                     <label for="input-fone" class="form-label">Telefone</label>
-                    <input type="fone" class="form-control" id="input-fone" placeholder="(30) 99876-5432">
+                    <input type="tel" class="form-control" id="input-fone" name="phone" placeholder="(30) 99876-5432">
                 </div>
                 <div class="mb-3">
                     <label for="input-subject" class="form-label">Assunto</label>
-                    <input type="text" class="form-control" id="input-subject" placeholder="Sobre o que deseja falar?">
+                    <input type="text" class="form-control" id="input-subject" name="subject" placeholder="Sobre o que deseja falar?">
                 </div>
                 <div class="mb-3">
                     <label for="input-message" class="form-label">Fale-nos o que deseja</label>
-                    <textarea class="form-control" id="input-message" rows="5"></textarea>
+                    <textarea class="form-control" id="input-message" name="message" rows="8" required></textarea>
                 </div>
+                <div class="text-end">
+                    <button type="submit" class="btn-custom" id="form-button">Enviar</button>
+                </div>
+            </form>
+            <div id="offcanvas-div">
             </div>
         </main>
     </main>

@@ -121,6 +121,54 @@ ul.dropdown-menu {
 }
 
 /* -------------------------------
+    Cards
+------------------------------- */
+
+div.card {
+  width: auto;
+  height: 100%;
+  background-color: var(--black);
+  color: var(--white);
+  border: none;
+}
+span.card-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* -------------------------------
+    Modal
+------------------------------- */
+
+div.modal-content {
+  background-color: var(--black);
+  color: var(--white);
+}
+div.modal-header,
+div.modal-footer {
+  border-color: #f1f6f246;
+}
+
+/* -------------------------------
+    Offcanvas
+------------------------------- */
+
+div.offcanvas {
+  background-color: var(--light-bege);
+}
+div.offcanvas-header {
+  background-color: var(--black);
+}
+div.offcanvas-body {
+  color: var(--black);
+  font-weight: 500;
+}
+h5.offcanvas-title {
+  color: var(--white);
+  font-weight: 600;
+} 
+
+/* -------------------------------
     Footer
 ------------------------------- */
 

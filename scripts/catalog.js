@@ -1,21 +1,17 @@
 import{
     renderAirplaneCards,
+    renderOffcanvas,
     renderNavbarLeftSide,
     renderNavbarRightSide,
-    markFavoritePlane,
+    renderAskForLoginModal,
+    setUpEventFunctions,
 }from './script.js'
 
 window.onload = () =>{
+    renderOffcanvas();
     renderNavbarLeftSide();
     renderNavbarRightSide('catalog');
     renderAirplaneCards(10);
+    renderAskForLoginModal();
+    setUpEventFunctions();
 }
-
-const cardContainer = document.getElementById('card-container')
-cardContainer.addEventListener('click', (event) =>{
-
-    if(event.target.classList.contains('btn-favorites')) {
-        let index = parseInt(event.target.id.split('-')[1], 10);    
-        markFavoritePlane(index, 10)
-    }
-});
