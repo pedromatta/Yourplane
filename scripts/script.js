@@ -37,7 +37,7 @@ function generateAirplaneCard(modelos, i, placement) {
             <h5 class="card-title">${modelos.model}</h5>
             <p class="card-text">${modelos.short_description}</p>
             <span class="card-buttons">
-                <a href="#" class="btn-custom py-2"; font-weight: 600">Detalhes</a>
+                <a href="details.html?id=${modelos.id}" class="btn-custom py-2"; font-weight: 600">Detalhes</a>
                 <img class="btn-favorites mt-1" id="favorites-${placement}-${i}" 
                 ${modelos.favorite ? 'src="img/star-fill.png"' : 'src="img/star.png"'}
                 >
@@ -96,11 +96,13 @@ function renderAirplaneCarousel() {
     for (let i = 1; i < 3; i++) {
         carouselItemDiv.innerHTML += `
         <div class="carousel-item">
-            <img src="${modelos[i].images[0]}" class="d-block w-100 carousel-image" alt="${modelos[i].model}">
-            <div class="carousel-caption d-block">
-            <h5>${modelos[i].model}</h5>
-            <p class="d-none d-md-block">${modelos[i].short_description}</p>
-            </div>
+            <a href="details.html?id=${modelos[i].id}">
+                <img src="${modelos[i].images[0]}" class="d-block w-100 carousel-image" alt="${modelos[i].model}">
+                <div class="carousel-caption d-block">
+                <h5>${modelos[i].model}</h5>
+                <p class="d-none d-md-block">${modelos[i].short_description}</p>
+                </div>
+            </a>
         </div>
         `;
     }
@@ -257,14 +259,14 @@ function logOut() {
     window.location.reload;
 }
 
-function setUpEventFunctions(){
+function setUpEventFunctions(cardNumber){
 
     document.addEventListener('click', (event) =>{
 
         if(event.target.classList.contains('btn-favorites')) {
             if(checkToken()){
                 let index = parseInt(event.target.id.split('-')[2], 10);    
-                markFavoritePlane(index, 6)
+                markFavoritePlane(index, cardNumber)
             }
         }
     });
@@ -287,6 +289,9 @@ function setUpEventFunctions(){
 
 // Exporta as funções
 export {
+    loadAirplanesFromLocalStorage,
+    checkToken,
+    renderUserName,
     renderAirplaneCarousel,
     renderAirplaneCards,
     renderOffcanvas,

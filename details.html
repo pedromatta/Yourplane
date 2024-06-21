@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yourplane</title>
+    <link rel="icon" type="image/png" href="img/logo-icon.png">
+    <link rel="stylesheet" href="styles/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+
+<body style="background-color: var(--light-bege);">
+    <div class="modal fade" id="askForLogin" tabindex="-1" aria-labelledby="askForLoginLabel" aria-hidden="true">
+    </div>
+    <header>
+        <div class="navbar index-navbar navbar-expand-md px-3" data-bs-theme="dark">
+            <div class="container-fluid mx-2">
+                <div class="d-flex align-items-center" id="navbar-left-side">
+                </div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+            <div class="collapse navbar-collapse mx-2" id="navbarNavAltMarkup">
+            </div>
+        </div>
+    </header>
+    <main>
+        <div id="carousel" class="carousel slide details-carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carousel" data-bs-slide-to="0" class="active" aria-current="true"
+                    aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner" id="carousel-item-div">
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+        <div class="row row-cols-2 mt-5 mx-3">
+            <div class="destaques-container px-4 col">
+                <h4 style="color: var(--black);">Descrição
+                    <hr />
+                </h4>
+                <p>Este avião Legacy 450 voa sob o número de cauda D-BFIL. Operado pela Atlas Air Service, foi construído em 2016 pela Embraer como parte da série Legacy 450. O D-BFIL está baseado em EDDW e pode transportar até 9 passageiros.</p>
+                <div class="card specifications-card">
+                    <button class="btn-specifications card-header my-2" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-card">Especificações</button>
+                    <div class="collapse card-body" id="collapse-card">
+                        <p class="card-text"><b>Largura </b>21.1 metros</p>
+                        <p class="card-text"><b>Envergadura </b>19.7 metros</p>
+                        <p class="card-text"><b>Altura </b>6.7 metros</p>
+                        <p class="card-text"><b>Peso Vazio </b>10500 kg</p>
+                        <p class="card-text"><b>Capacidade Máxima </b>16000 kg</p>
+                        <p class="card-text"><b>Motores </b>Honeywell HTF7500E</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div id="offcanvas-div">
+        </div>
+    </main>
+    <footer>
+        <div class="container-fluid p-5" style="background-color: var(--black); color: var(--white); border: none;">
+            <div class="row row-cols-sm-2 align-items-center">
+                <div class="col text-center">
+                    <img src="img/logo-white.svg" alt="Logo Yourplane branco" height="30">
+                </div>
+                <div class="col my-3 my-sm-0">
+                    <h5>Fique por dentro dos últimos lançamentos!</h5>
+                    <div>
+                        <input id="e-mail" type="text" placeholder="Insira seu e-mail" class="my-1">
+                        <button type="button" class="my-1">Inscrever-se</button>
+                    </div>
+                    <p>Você receberá e-mails sobre novos produtos, anúncios e promoções.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script type="module" src="scripts/details.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

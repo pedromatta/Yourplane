@@ -13,5 +13,5 @@ window.onload = () =>{
     renderNavbarRightSide('catalog');
     renderAirplaneCards(10);
     renderAskForLoginModal();
-    setUpEventFunctions();
+    setUpEventFunctions(10);
 }

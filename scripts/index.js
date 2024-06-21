@@ -16,7 +16,7 @@ window.onload = () =>{
     renderAirplaneCarousel();
     renderAirplaneCards(6);
     renderAskForLoginModal();
-    setUpEventFunctions();
+    setUpEventFunctions(6);
 };
 
 
