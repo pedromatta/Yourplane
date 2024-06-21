@@ -318,6 +318,9 @@ footer button {
   .catalog-div{
     display: flex;
   }
+  .dropdown-filtrar-menu {
+    width: 200px;
+  }
 }
 
 @media screen and (min-width: 768px) {

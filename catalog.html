@@ -47,14 +47,14 @@
                     </li>
                     <li class="col dropdown dropdown-filtrar" data-bs-theme="dark">
                         <a class="dropdown-toggle dropdown-filtrar-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">filtrar</a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item categoria-filtrar" id="opcaoFiltrar1" href="#">Preço Crescente</a></li>
-                            <li><a class="dropdown-item categoria-filtrar" id="opcaoFiltrar2" href="#">Preço Decrescente</a></li>
-                            <li><a class="dropdown-item categoria-filtrar" id="opcaoFiltrar3" href="#">Peso Crescente</a></li>
-                            <li><a class="dropdown-item categoria-filtrar" id="opcaoFiltrar4" href="#">Peso Decrescente</a></li>
-                            <li><a class="dropdown-item categoria-filtrar" id="opcaoFiltrar5" href="#">Capacidade Crescente</a></li>
-                            <li><a class="dropdown-item categoria-filtrar" id="opcaoFiltrar6" href="#">Capacidade Decrescente</a></li>
-                        </ul>
+                            <form class="dropdown-menu dropdown-filtrar-menu p-4">
+                                <label class="form-label" for="max-passengers">Capacidade</label>
+                                <div class="d-inline-flex" id="max-passengers">
+                                    <input class="form-control" type="number" id="input-min-passengers" placeholder="Min">
+                                    <input class="form-control" type="number" id="input-max-passengers" placeholder="Max">
+                                </div>
+                            </form>
+                        </div>
                     </li>
                 </ul>
             </div> 

@@ -7,6 +7,8 @@ import{
     setUpEventFunctions,
 }from './script.js'
 
+
+
 window.onload = () =>{
     renderOffcanvas();
     renderNavbarLeftSide();
