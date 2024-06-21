@@ -293,6 +293,7 @@ export {
     checkToken,
     renderUserName,
     renderAirplaneCarousel,
+    generateAirplaneCard,
     renderAirplaneCards,
     renderOffcanvas,
     renderNavbarLeftSide,
