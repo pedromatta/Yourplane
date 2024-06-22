@@ -310,6 +310,22 @@ footer button {
 /* -------------------------------
     Details
 ------------------------------- */
+div.details-card {
+  background-color: transparent;
+  border: solid 2px var(--black);
+}
+div.details-card-text {
+  padding: 0.25rem 1rem;
+  background-color: var(--black);
+  font-weight: 200;
+  font-size: 14px;
+}
+div.details-card-body {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--black);
+}
+
 
 /* -------------------------------
     Responsividade
