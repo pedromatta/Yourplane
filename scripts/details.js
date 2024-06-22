@@ -146,7 +146,7 @@ function renderSpecifications(currentPlane) {
         <div class="card specifications-card">
             <button class="btn-specifications card-header my-2" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-card">Especificações</button>
             <div class="collapse card-body" id="collapse-card">
-                <p class="card-text"><b>Largura: </b>${currentPlane.specifications.length}</p>
+                <p class="card-text"><b>Comprimento: </b>${currentPlane.specifications.length}</p>
                 <p class="card-text"><b>Envergadura: </b>${currentPlane.specifications.wingspan}</p>
                 <p class="card-text"><b>Altura: </b>${currentPlane.specifications.height}</p>
                 <p class="card-text"><b>Peso Vazio: </b>${currentPlane.specifications.empty_weight}</p>
