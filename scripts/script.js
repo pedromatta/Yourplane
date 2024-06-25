@@ -60,7 +60,11 @@ function markFavoritePlane(index, numberAirplanes) {
     }
 
     localStorage.setItem('airplanes', JSON.stringify(airplanes));
-    renderAirplaneCards(numberAirplanes);
+
+    if(cardContainer)
+        renderAirplaneCards(numberAirplanes);
+    else if(numberAirplanes == 0)
+        window.location.reload();
     renderFavoritesList();
 }
 
@@ -256,7 +260,7 @@ function renderAskForLoginModal(){
 // Função para deslogar o usuário
 function logOut() {
     localStorage.removeItem('token');
-    window.location.reload;
+    window.location.reload();
 }
 
 function setUpEventFunctions(cardNumber){

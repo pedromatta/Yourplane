@@ -310,6 +310,10 @@ footer button {
 /* -------------------------------
     Details
 ------------------------------- */
+#details-information img.btn-favorites {
+  width: auto;
+}
+
 div.details-card {
   background-color: transparent;
   border: solid 2px var(--black);

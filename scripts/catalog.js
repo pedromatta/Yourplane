@@ -33,6 +33,11 @@ function renderFilteredCards(minNumber, maxNumber) {
     cardContainer.innerHTML = '';
 
     for (let i = 0; i < airplanes.length; i++) {
+        if (!maxNumber){
+            for(let j = 0; j < airplanes.length; j++)
+                if(airplanes[j].capacity > maxNumber)
+                    maxNumber = airplanes[j].capacity;              
+        }
         if (airplanes[i].capacity >= minNumber && airplanes[i].capacity <= maxNumber)
             cardContainer.innerHTML += generateAirplaneCard(airplanes[i], i, 'page');
         else

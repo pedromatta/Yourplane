@@ -15,7 +15,7 @@ function getElementsCallFunctions(){
     const airplanes = loadAirplanesFromLocalStorage();
     const currentPlane = getCurrentPlane(airplanes);
 
-    renderDetailsNavbarRightSide(airplanes, currentPlane);
+    renderDetailsNavbarRightSide();
     renderDetailsCarousel(currentPlane);
     renderDetailsInformation(currentPlane);
 }
@@ -34,8 +34,7 @@ function getCurrentPlane(airplanes) {
     }
 }
 
-function renderDetailsNavbarRightSide(airplanes, currentPlane){
-    const navLinks = renderDetailsNavLinks(airplanes, currentPlane);
+function renderDetailsNavbarRightSide(){
     if (checkToken()) {
         navbarRightSide.innerHTML = `
         <ul class="navbar-nav me-auto d-flex">
@@ -54,13 +53,7 @@ function renderDetailsNavbarRightSide(airplanes, currentPlane){
                 </ul>
             </li>
             <li class="nav-item">
-                ${navLinks[0]}
-            </li>
-            <li class="nav-item">
-                ${navLinks[1]}
-            </li>
-            <li class="nav-item">
-                ${navLinks[2]}
+                <a href="catalog.html" class="nav-link">Catálogo</a> 
             </li>
         </ul>
         `;
@@ -68,40 +61,11 @@ function renderDetailsNavbarRightSide(airplanes, currentPlane){
     } else {
         navbarRightSide.innerHTML = `
         <div class="navbar-nav d-flex">
-            ${navLinks[0]}
-            ${navLinks[1]}
-            ${navLinks[2]}
+            <a href="catalog.html" class="nav-link">Catálogo</a>
             <a class="nav-link d-md-none" href="login.html">Login</a>
         </div>
         `;
     }
-}
-
-function renderDetailsNavLinks(airplanes, currentPlane){
-
-    let firstNavLink = '';
-    let secondNavLink = '';
-    let thirdNavLink = '';
-    
-    for (let i = 0; i < airplanes.length; i++){
-        if(airplanes[i] == currentPlane) {
-            if(!airplanes[i-1]) {
-                firstNavLink = `<a class="nav-link active" aria-current="page" href="details.html?id=${i}">${airplanes[i].model}</a>`;
-                secondNavLink = `<a class="nav-link" href="details.html?id=${i+1}">${airplanes[i+1].model}</a>`;
-                thirdNavLink = `<a class="nav-link" href="details.html?id=${i+2}">${airplanes[i+2].model}</a>`;
-            }else if(!airplanes[i+1]) {
-                firstNavLink = `<a class="nav-link" href="details.html?id=${i-2}">${airplanes[i-2].model}</a>`;
-                secondNavLink = `<a class="nav-link" href="details.html?id=${i-1}">${airplanes[i-1].model}</a>`;
-                thirdNavLink = `<a class="nav-link active" aria-current="page" href="details.html?id=${i}">${airplanes[i].model}</a>`;
-            }else {
-                firstNavLink = `<a class="nav-link" href="details.html?id=${i-1}">${airplanes[i-1].model}</a>`;
-                secondNavLink = `<a class="nav-link active" aria-current="page" href="details.html?id=${i}">${airplanes[i].model}</a>`;
-                thirdNavLink = `<a class="nav-link" href="details.html?id=${i+1}">${airplanes[i+1].model}</a>`;
-            }
-            break
-        }
-    }
-    return [firstNavLink, secondNavLink, thirdNavLink];
 }
 
 function renderDetailsCarousel(currentPlane){
@@ -135,9 +99,11 @@ function renderDetailsInformation(currentPlane){
 }
 
 function renderDescription(currentPlane) {
-    return `<h4 style="color: var(--black);">Descrição
-                <hr />
-            </h4>
+    return `<div class="row row-cols-2 justify-content-between">
+                <h4 style="color: var(--black);">Descrição</h4>
+                <img class="btn-favorites mt-1" id="favorites-page-${currentPlane.id}" ${currentPlane.favorite ? 'src="img/star-fill.png"' : 'src="img/star.png"'}>
+            </div>
+            <hr />
             <p class="text-justify">${currentPlane.description}</p>`
 }
 
@@ -179,10 +145,17 @@ function renderIntel(currentPlane) {
             <div class="card-body details-card-body">${currentPlane.cruise_speed}</div>
         </div>`
 }
-
 window.onload = () =>{
     renderNavbarLeftSide();
     renderOffcanvas();
     setUpEventFunctions();
     getElementsCallFunctions();
 }
+
+detailsInformation.addEventListener('click', (event) =>{
+    if(event.target.classList.contains('btn-favorites')) {
+        if(checkToken()){
+            window.location.reload();
+        }
+    }
+});
